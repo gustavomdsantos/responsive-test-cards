@@ -15,11 +15,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>SMPTE Color Bars</title>
 
+	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath fill='%23131313' d='M0 0h16v16H0Z'/%3E%3Cpath fill='silver' d='M0 0h2.286v10.667H0Z'/%3E%3Cpath fill='%23c0c000' d='M2.286 0v10.667H4.57V0Z'/%3E%3Cpath fill='%2300c0c0' d='M4.571 0v10.667h2.286V0Z'/%3E%3Cpath fill='%2300c000' d='M6.857 0v10.667h2.286V0Z'/%3E%3Cpath fill='%23c000c0' d='M9.143 0v10.667h2.286V0Z'/%3E%3Cpath fill='%23c00000' d='M11.429 0v10.667h2.285V0Z'/%3E%3Cpath fill='%230000c0' d='M13.714 0v10.667H16V0ZM0 10.667h2.286V12H0Z'/%3E%3Cpath fill='%23c000c0' d='M4.571 10.667h2.286V12H4.571z'/%3E%3Cpath fill='%2300c0c0' d='M9.143 10.667h2.286V12H9.143Z'/%3E%3Cpath fill='silver' d='M13.714 10.667H16V12h-2.286z'/%3E%3Cpath fill='%2300214c' d='M0 12h2.857v4H0Z'/%3E%3Cpath fill='%23fff' d='M2.857 12h2.857v4H2.857Z'/%3E%3Cpath fill='%2332006a' d='M5.714 12h2.857v4H5.714Z'/%3E%3Cpath fill='%23090909' d='M11.429 12h.761v4h-.761Z'/%3E%3Cpath fill='%231d1d1d' d='M12.952 12h.762v4h-.762z'/%3E%3C/svg%3E">
+
 	<style>
 		body {
 			margin: 0;
 			padding: 0;
-			background: #131313;
 		}
 		.test-card {
 			display: flex;
@@ -27,24 +28,22 @@
 			height: 100vh;
 			height: 100dvh;
 		}
-
-		/* ---------- ROWS ---------- */
 		.row {
 			display: inherit;
 			width: 100%;
 		}
-		.row.top    { flex: 67; }
-		.row.middle { flex: 8; }
-		.row.bottom { flex: 25; }
-
-		/* ---------- DEFAULT COLUMN ---------- */
-		.col { flex: 1; }
-
-		/* ---------- BOTTOM WEIGHTS ---------- */
-		.bottom-wide  { flex: 5; }
+		.pluge {
+			display: inherit;
+			flex-direction: row;
+		}
+		.pluge > div   { flex: 1; }
+		.row.top       { flex: 67; }
+		.row.middle    { flex: 8; }
+		.row.bottom    { flex: 25; }
+		.col           { flex: 1; }
+		.bottom-wide   { flex: 5; }
 		.bottom-narrow { flex: 4; }
 
-		/* ---------- COLORS ---------- */
 		.whitey    { background: #c0c0c0; }
 		.yellow    { background: #c0c000; }
 		.cyan      { background: #00c0c0; }
@@ -59,14 +58,6 @@
 		.dark-gray { background: #131313; }
 		.gray      { background: #1d1d1d; }
 
-		/* ---------- PLUGE ---------- */
-		.pluge {
-			display: inherit;
-			flex-direction: row;
-		}
-		.pluge > div { flex: 1; }
-
-		/* ---------- INFO ---------- */
 		.info-zone {
 			position: fixed;
 			right: 0;
@@ -85,14 +76,13 @@
 			transition: opacity 0.2s ease;
 		}
 		.info a { color: inherit; }
-
+		/* for devices with a cursor */
 		@media (hover: hover) and (pointer: fine) {
 			.info { opacity: 0; }
 			.info-zone:hover .info { opacity: 1; }
 		}
 	</style>
 </head>
-
 <body>
 	<main class="test-card">
 		<div class="row top">
@@ -114,16 +104,16 @@
 			<div class="col whitey"></div>
 		</div>
 		<div class="row bottom">
-			<div class="bottom-wide dark-blue"></div>
-			<div class="bottom-wide white"></div>
-			<div class="bottom-wide purple"></div>
-			<div class="bottom-wide dark-gray"></div>
-			<div class="bottom-narrow pluge">
+			<div class="col bottom-wide dark-blue"></div>
+			<div class="col bottom-wide white"></div>
+			<div class="col bottom-wide purple"></div>
+			<div class="col bottom-wide dark-gray"></div>
+			<div class="col bottom-narrow pluge">
 				<div class="black"></div>
 				<div class="dark-gray"></div>
 				<div class="gray"></div>
 			</div>
-			<div class="bottom-narrow dark-gray"></div>
+			<div class="col bottom-narrow dark-gray"></div>
 		</div>
 	</main>
 	<div class="info-zone">
