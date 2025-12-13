@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+	 Responsive SMPTE Color Bars Test Card
+
+	 SMPTE ECR 1-1978 pattern that fills the entire viewport.
+
+	 Author: Gustavo Moraes
+	 License: MIT
+	 Homepage: https://github.com/gustavomdsantos/responsive-test-cards
+-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SMPTE Color Bars</title>
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background: #131313;
+		}
+		.test-card {
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+			height: 100dvh;
+		}
+
+		/* ---------- COMMON ROW STYLES ---------- */
+		.row {
+			display: inherit;
+			width: 100%;
+		}
+		.row > div { flex: 1; }
+
+		/* ---------- ROW HEIGHTS ---------- */
+		.row.top    { flex: 67; }
+		.row.middle { flex: 8; }
+		.row.bottom { flex: 25; }
+
+		/* --------- COLORS (approximations) --------- */
+		.whitey    { background: #c0c0c0; }
+		.yellow    { background: #c0c000; }
+		.cyan      { background: #00c0c0; }
+		.green     { background: #00c000; }
+		.magenta   { background: #c000c0; }
+		.red       { background: #c00000; }
+		.blue      { background: #0000c0; }
+		.dark-blue { background: #00214c; }
+		.purple    { background: #32006a; }
+		.dark-gray { background: #131313; }
+		.gray      { background: #1d1d1d; }
+		.white     { background: #ffffff; }
+		.black     { background: #090909; }
+
+		/* ---------- BOTTOM ROW STRUCTURE ---------- */
+		.bottom-left {
+			display: inherit;
+			flex: 5;
+		}
+		.bottom-right {
+			display: inherit;
+			flex: 2;
+		}
+		.bottom-left > div,
+		.bottom-right > div {
+			flex: 1;
+		}
+		.pluge {
+			display: inherit;
+			flex: 1;
+			height: 100%;
+		}
+		.pluge > div { flex: 1; }
+
+		/* ---------- INFO OVERLAY ---------- */
+		.info-zone {
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			z-index: 10;
+			padding: 1.5rem;
+		}
+		.info {
+			margin: 0;
+			font-size: 0.75rem;
+			font-family: system-ui, sans-serif;
+			color: #fff;
+			background: rgba(0, 0, 0, 0.25);
+			padding: 0.4rem 0.6rem;
+			border-radius: 5px;
+			transition: opacity 0.2s ease;
+		}
+		.info a { color: inherit; }
+		@media (hover: hover) and (pointer: fine) {
+			.info { opacity: 0; }
+			.info-zone:hover .info { opacity: 1; }
+		}
+	</style>
+</head>
+
+<body>
+	<main class="test-card">
+		<div class="row top">
+			<div class="whitey"></div>
+			<div class="yellow"></div>
+			<div class="cyan"></div>
+			<div class="green"></div>
+			<div class="magenta"></div>
+			<div class="red"></div>
+			<div class="blue"></div>
+		</div>
+		<div class="row middle">
+			<div class="blue"></div>
+			<div class="dark-gray"></div>
+			<div class="magenta"></div>
+			<div class="dark-gray"></div>
+			<div class="cyan"></div>
+			<div class="dark-gray"></div>
+			<div class="whitey"></div>
+		</div>
+		<div class="row bottom">
+			<div class="bottom-left">
+				<div class="dark-blue"></div>
+				<div class="white"></div>
+				<div class="purple"></div>
+			</div>
+			<div class="bottom-right">
+				<div class="dark-gray"></div>
+				<div class="pluge">
+					<div class="black"></div>
+					<div class="dark-gray"></div>
+					<div class="gray"></div>
+				</div>
+				<div class="dark-gray"></div>
+			</div>
+		</div>
+	</main>
+	<div class="info-zone">
+		<footer class="info">
+			© 2025 gustavomdsantos. Released under the
+			<a href="https://github.com/gustavomdsantos/responsive-test-cards/blob/main/LICENSE" target="_blank">MIT License</a> |
+			<a href="https://github.com/gustavomdsantos/responsive-test-cards" target="_blank">Source</a>
+		</footer>
+	</div>
+</body>
+</html>
