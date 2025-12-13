@@ -6,7 +6,7 @@ Fully responsive test cards for Screen and Video drivers, made entirely with HTM
 
 - [x] [RGB Test Card](https://rawcdn.githack.com/gustavomdsantos/responsive-test-cards/refs/heads/main/RGB%20Test%20Card.html)
 - [x] [EBU 100% Colour Bars](https://rawcdn.githack.com/gustavomdsantos/responsive-test-cards/refs/heads/main/EBU%20100%20Percent%20Colour%20Bars.html)
-- [ ] SMPTE ECR 1-1978 Color Bars
+- [ ] [SMPTE ECR 1-1978 Color Bars](https://rawcdn.githack.com/gustavomdsantos/responsive-test-cards/refs/heads/main/SMPTE%20Color%20Bars.html)
 - [ ] SMPTE RP 219-2002 Color Bars
 - [ ] Telefunken FuBK Test Card
 - [ ] RCA Indian Head Test Card
@@ -16,7 +16,7 @@ Fully responsive test cards for Screen and Video drivers, made entirely with HTM
 
 ### To-do (if I have free time)
 
-- [ ] Gus M.D.'s HDR Test
+- [ ] Gus M.D.'s HDR Test Card
 - [ ] Gus M.D.'s E-Ink Screen and Print Test Card
 - [ ] Links Browser Test Card
 
