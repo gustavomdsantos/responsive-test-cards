@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--
-	 Responsive RGB Test Card
+	 Responsive EBU 100% Colour Bars Test Card
 
-	 A RGB (Red, Green, Blue) color test pattern.
-	 Divides the viewport into three equal horizontal strips.
+	 EBU 100/0/100/0 Colour Bars pattern that fills the entire viewport.
 
 	 Author: Gustavo Moraes
 	 License: MIT
 	 Homepage: https://github.com/gustavomdsantos/responsive-test-cards
-	 Online version: https://t.ly/DUzUS
+	 Online version: 
 -->
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>RGB Test Card</title>
+	<title>EBU 100% Colour Bars</title>
 
-	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='5.33' fill='%23ff0000'/%3E%3Crect y='5.33' width='16' height='5.33' fill='%2300ff00'/%3E%3Crect y='10.66' width='16' height='5.34' fill='%230000ff'/%3E%3C/svg%3E">
+	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='2' height='16' fill='%23ffffff'/%3E%3Crect x='2' width='2' height='16' fill='%23ffff00'/%3E%3Crect x='4' width='2' height='16' fill='%2300ffff'/%3E%3Crect x='6' width='2' height='16' fill='%2300ff00'/%3E%3Crect x='8' width='2' height='16' fill='%23ff00ff'/%3E%3Crect x='10' width='2' height='16' fill='%23ff0000'/%3E%3Crect x='12' width='2' height='16' fill='%230000ff'/%3E%3Crect x='14' width='2' height='16' fill='%23000000'/%3E%3C/svg%3E">
 
 	<style>
 		body {
 			margin: 0;
 			padding: 0;
 		}
+
 		.test-card {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			height: 100vh;
 			height: 100dvh;
 		}
+
 		.test-card > div {
 			flex: 1;
 		}
 
-		.red { background-color: #ff0000; }
-		.green { background-color: #00ff00; }
-		.blue { background-color: #0000ff; }
+		.white   { background-color: #ffffff; }
+		.yellow  { background-color: #ffff00; }
+		.cyan    { background-color: #00ffff; }
+		.green   { background-color: #00ff00; }
+		.magenta { background-color: #ff00ff; }
+		.red     { background-color: #ff0000; }
+		.blue    { background-color: #0000ff; }
+		.black   { background-color: #000000; }
 
 		.info-zone {
 			position: fixed;
@@ -72,11 +78,17 @@
 		}
 	</style>
 </head>
+
 <body>
 	<main class="test-card">
-		<div class="red"></div>
+		<div class="white"></div>
+		<div class="yellow"></div>
+		<div class="cyan"></div>
 		<div class="green"></div>
+		<div class="magenta"></div>
+		<div class="red"></div>
 		<div class="blue"></div>
+		<div class="black"></div>
 	</main>
 	<div class="info-zone">
 		<footer class="info">
