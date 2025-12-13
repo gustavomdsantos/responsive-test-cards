@@ -13,8 +13,8 @@ Fully responsive test cards for Screen and Video drivers, made entirely with HTM
 - [ ] SMPTE RP 219-2002 Color Bars
 - [ ] RCA TK-1C 'Indian Head' Test Card
 - [ ] Telefunken FuBK Test Card
-- [ ] BBC Test Card F
 - [ ] Philips PM5544 Test Card
+- [ ] BBC Test Card F
 - [ ] GY/T 413-2024 Test Card
 
 ### To-do (if I have free time)
