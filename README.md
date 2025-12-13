@@ -1,6 +1,6 @@
-## `Responsive Test Cards`
+# `Responsive Test Cards`
 
-Fully responsive test cards for Screen and video drivers, made entirely with HTML + CSS + SVG. As they are standalone files, you can download and use them 100% offline, if you want. No analytics, no JS.
+Fully responsive test cards for Screen and Video drivers, made entirely with HTML + CSS + SVG. As they are standalone files, you can download and use them 100% offline, if you want. No analytics, no JS.
 
 ### Roadmap
 
