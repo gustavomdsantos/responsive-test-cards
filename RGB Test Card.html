@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<!--
+	 Responsive RGB Test Card
+	 A RGB (Red, Green, Blue) color test page. Divides the screen into three equal horizontal strips, perfectly adjusting to any screen size.
+
+	 Author: Gustavo Moraes
+	 Homepage: https://github.com/gustavomdsantos/responsive-test-cards
+-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RGB Test Card</title>
+
+	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='5.33' fill='%23ff0000'/%3E%3Crect y='5.33' width='16' height='5.33' fill='%2300ff00'/%3E%3Crect y='10.66' width='16' height='5.34' fill='%230000ff'/%3E%3C/svg%3E">
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		.test-card {
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+			height: 100dvh;
+		}
+		.test-card > div {
+			flex: 1;
+		}
+		.red { background-color: #ff0000; }
+		.green { background-color: #00ff00; }
+		.blue { background-color: #0000ff; }
+		.info {
+			position: fixed;
+			right: 0.75rem;
+			bottom: 0.75rem;
+			margin: 0;
+
+			font-size: 0.75rem;
+			font-family: system-ui, sans-serif;
+			color: #fff;
+
+			background: rgba(0, 0, 0, 0.25);
+			padding: 0.4rem 0.6rem;
+			border-radius: 5px;
+
+			transition: opacity 0.2s ease;
+		}
+		.info a { color: inherit; }
+		@media (hover: hover) and (pointer: fine) {
+			.info {
+				opacity: 0;
+			}
+
+			body:hover .info {
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="test-card">
+		<div class="red"></div>
+		<div class="green"></div>
+		<div class="blue"></div>
+	</div>
+	<p class="info">© 2025 gustavomdsantos. Released under the <a href="https://github.com/gustavomdsantos/responsive-test-cards/blob/main/LICENSE" target="_blank">MIT License</a> | <a href="https://github.com/gustavomdsantos/responsive-test-cards" target="_blank">Source</a></p>
+</body>
+</html>
