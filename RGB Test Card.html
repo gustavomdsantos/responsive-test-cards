@@ -32,10 +32,16 @@
 		.red { background-color: #ff0000; }
 		.green { background-color: #00ff00; }
 		.blue { background-color: #0000ff; }
-		.info {
+		.info-zone {
 			position: fixed;
-			right: 0.75rem;
-			bottom: 0.75rem;
+			right: 0;
+			bottom: 0;
+			z-index: 10;
+
+			/* invisible margin */
+			padding: 1.5rem;
+		}
+		.info {
 			margin: 0;
 
 			font-size: 0.75rem;
@@ -49,23 +55,28 @@
 			transition: opacity 0.2s ease;
 		}
 		.info a { color: inherit; }
+		/* invisible only in devices with a mouse */
 		@media (hover: hover) and (pointer: fine) {
 			.info {
 				opacity: 0;
 			}
 
-			body:hover .info {
+			.info-zone:hover .info {
 				opacity: 1;
 			}
 		}
 	</style>
 </head>
 <body>
-	<div class="test-card">
+	<main class="test-card">
 		<div class="red"></div>
 		<div class="green"></div>
 		<div class="blue"></div>
+	</main>
+	<div class="info-zone">
+		<footer class="info">
+			© 2025 gustavomdsantos. Released under the <a href="https://github.com/gustavomdsantos/responsive-test-cards/blob/main/LICENSE" target="_blank">MIT License</a> | <a href="https://github.com/gustavomdsantos/responsive-test-cards" target="_blank">Source</a>
+		</footer>
 	</div>
-	<p class="info">© 2025 gustavomdsantos. Released under the <a href="https://github.com/gustavomdsantos/responsive-test-cards/blob/main/LICENSE" target="_blank">MIT License</a> | <a href="https://github.com/gustavomdsantos/responsive-test-cards" target="_blank">Source</a></p>
 </body>
 </html>
