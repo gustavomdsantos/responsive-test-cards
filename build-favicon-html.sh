@@ -96,9 +96,7 @@ encode_svg_data_uri() {
     -e 's/#/%23/g' \
     -e 's/</%3C/g' \
     -e 's/>/%3E/g' \
-    -e 's/"/%22/g' \
-    -e "s/'/%27/g" \
-    -e 's/ /%20/g' \
+    -e "s/\"/'/g" \
     "$SVG" | tr -d '\n'
 }
 
